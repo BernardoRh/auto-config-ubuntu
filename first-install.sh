@@ -1,6 +1,7 @@
 #!/bin/sh
 sudo apt update;
 sudo apt upgrade;
+sudo apt install git;
 sudo apt install snapd;
 sudo snap install gcompris;
 sudo snap install tux-paint;
