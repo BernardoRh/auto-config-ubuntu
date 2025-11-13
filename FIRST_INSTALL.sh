@@ -13,6 +13,15 @@ sudo apt install openjdk-21-jdk -y;
 mkdir /etc/firefox;
 mkdir /etc/firefox/policies;
 mkdir /home/aluno/.hidden;
+mkdir /etc/dconf/profile;
+mkdir /etc/dconf/db;
+mkdir /etc/dconf/db/local.d;
+mkdir /etc/dconf/db/local.d/locks;
+echo "user-db:user
+system-db:local" > /etc/dconf/profile/user;
+echo "/org/gnome/desktop/background/picture-uri
+/org/gnome/desktop/background/picture-uri-dark" > /etc/dconf/db/local.d/locks/default-wallpaper;
+dconf update;
 echo " echo '{
   \"policies\": {
     \"OfferToSaveLoginsDefault\": false,
@@ -120,4 +129,22 @@ ultrasurf_nodes
 vpn
 warez
 webhosting" > /etc/CTparental/categories-enabled.conf;
+echo "#!/bin/sh
+#The initial script, that will dowload and run the scripts every startup.
+#This script will be located in the root of the .hidden folder and will never be changed.
+echo \"rm -r /home/aluno/.hidden/auto-conifg-ubuntu;
+git clone https://github.com/BernardoRh/auto-config-ubuntu.git\" > /home/aluno/.hidden/gitclone.sh;
+bash /home/aluno/.hidden/gitclone.sh;
+bash /home/aluno/.hidden/auto-conifg-ubuntu/STARTUP_SCRIPT.sh" > /home/aluno/.hidden/on-startup.sh;
+echo "[Unit]
+Description=Start updates on the machine
+
+[Service]
+Type=oneshot
+ExecStart=/home/aluno/.hidden/on-startup.sh
+
+[Install]
+WantedBy=multi-user.target" > /etc/systemd/system/startup.service;
+systemctl enable startup.service;
+shutdown -r;
 rm -- "$0"
