@@ -133,7 +133,7 @@ echo "#!/bin/sh
 #The initial script, that will dowload and run the scripts every startup.
 #This script will be located in the root of the .hidden folder and will never be changed.
 echo \"rm -r /home/aluno/.hidden/auto-config-ubuntu;
-git clone https://github.com/BernardoRh/auto-config-ubuntu.git\" > /home/aluno/.hidden/gitclone.sh;
+git clone https://github.com/BernardoRh/auto-config-ubuntu.git /home/aluno/.hidden/auto-config-ubuntu\" > /home/aluno/.hidden/gitclone.sh;
 bash /home/aluno/.hidden/gitclone.sh;
 bash /home/aluno/.hidden/auto-config-ubuntu/STARTUP_SCRIPT.sh" > /home/aluno/.hidden/on-startup.sh;
 echo "[Unit]
@@ -145,6 +145,7 @@ ExecStart=/home/aluno/.hidden/on-startup.sh
 
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/startup.service;
+chmod +rx /home/aluno/.hidden/on-startup.sh;
 systemctl enable startup.service;
 shutdown -r;
 rm -- "$0"
