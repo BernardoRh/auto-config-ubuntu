@@ -1,2 +1,3 @@
 INSTALL_STARTUP_SCRIPT.sh
 FIRST_INSTALL.sh
+on-startup.sh
