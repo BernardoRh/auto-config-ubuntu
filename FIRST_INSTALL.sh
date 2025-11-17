@@ -70,7 +70,8 @@ apt -f install;
 rm ctparental-min-lighttpd_debian13_ubuntu24.04_5.1.29-1.0_all.deb;
 echo "rachacuca.com.br
 wordwall.net
-www.coquinhos.com" > /etc/CTparental/dip-rehabiliter.conf;
+www.coquinhos.com
+web.whatsapp.com" > /etc/CTparental/dip-rehabiliter.conf;
 echo "www.youtube.com" > /etc/CTparental/dip-blackliste.conf;
 echo "adult
 adultsearchengine
@@ -138,14 +139,17 @@ bash /home/aluno/.hidden/gitclone.sh;
 bash /home/aluno/.hidden/auto-config-ubuntu/STARTUP_SCRIPT.sh" > /home/aluno/.hidden/on-startup.sh;
 echo "[Unit]
 Description=Start updates on the machine
+After=network.target
 
 [Service]
 Type=oneshot
 ExecStart=/home/aluno/.hidden/on-startup.sh
+User=root
 
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/startup.service;
 chmod +rx /home/aluno/.hidden/on-startup.sh;
 systemctl enable startup.service;
+systemctl daemon-reload;
 shutdown -r;
 rm -- "$0"
