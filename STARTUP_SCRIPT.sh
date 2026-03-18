@@ -1,16 +1,16 @@
 #!/bin/sh
 #Here will be all the scripts the machine will run every time it starts up
 sudo CTparental -off
-echo "rachacuca.com.br
+sudo echo "rachacuca.com.br
 wordwall.net
 coquinhos.com
 whatsapp.com
 escolagames.com.br" > /etc/CTparental/dip-rehabiliter.conf;
-echo "youtube.com
+sudo echo "youtube.com
 chatgpt.com
 friv.com
 poki.com" > /etc/CTparental/dip-blackliste.conf;
-echo "adult
+sudo echo "adult
 adultsearchengine
 agressif
 associations_religieuses
