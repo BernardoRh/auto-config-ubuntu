@@ -66,3 +66,4 @@ ultrasurf_nodes
 vpn
 warez
 webhosting" > /etc/CTparental/categories-enabled.conf
+echo "teste teste teste teste teste" > /home/aluno/.hidden/TESTE.txt
