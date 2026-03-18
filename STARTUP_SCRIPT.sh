@@ -5,4 +5,5 @@ echo "rachacuca.com.br
 wordwall.net
 www.coquinhos.com
 web.whatsapp.com
-escolagames.com.br" > /etc/CTparental/dip-rehabiliter.conf;
+escolagames.com.br
+chatgpt.com" > /etc/CTparental/dip-rehabiliter.conf;
