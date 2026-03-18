@@ -1,15 +1,15 @@
 #!/bin/sh
 #Here will be all the scripts the machine will run every time it starts up
-sudo CTparental -off
+sudo CTparental -on
 sudo echo "rachacuca.com.br
 wordwall.net
 coquinhos.com
 whatsapp.com
-escolagames.com.br" > /etc/CTparental/dip-rehabiliter.conf;
+escolagames.com.br" > /etc/CTparental/dip-rehabiliter.conf
 sudo echo "youtube.com
 chatgpt.com
 friv.com
-poki.com" > /etc/CTparental/dip-blackliste.conf;
+poki.com" > /etc/CTparental/dip-blackliste.conf
 sudo echo "adult
 adultsearchengine
 agressif
@@ -65,5 +65,4 @@ tricheur_pix
 ultrasurf_nodes
 vpn
 warez
-webhosting" > /etc/CTparental/categories-enabled.conf;
-sudo CTparental -on
+webhosting" > /etc/CTparental/categories-enabled.conf
