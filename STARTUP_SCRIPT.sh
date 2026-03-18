@@ -3,7 +3,7 @@
 sudo CTparental -on
 echo "rachacuca.com.br
 wordwall.net
-www.coquinhos.com
-web.whatsapp.com
+coquinhos.com
+whatsapp.com
 escolagames.com.br
 chatgpt.com" > /etc/CTparental/dip-rehabiliter.conf;
