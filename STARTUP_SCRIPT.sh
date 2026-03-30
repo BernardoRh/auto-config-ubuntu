@@ -70,3 +70,26 @@ vpn
 warez
 webhosting" > /etc/CTparental/categories-enabled.conf
 echo "teste teste teste teste teste" > /home/aluno/.hidden/TESTE.txt
+
+
+
+#{
+#  "policies": {
+#    "DisableFirefoxStudies": true,
+#    "DisablePocket": true,
+#    "Preferences": {
+#      "browser.ml.enable": false,
+#      "browser.ml.chat.enabled": false,
+#      "browser.ml.chat.page.footerBadge": false,
+#      "browser.ml.chat.page.menuBadge": false,
+#      "browser.ml.chat.menu": false,
+#      "browser.ml.linkPreview.enabled": false,
+#      "browser.ml.smartAssist.enabled": false,
+#      "browser.ml.pageAssist.enabled": false,
+#      "browser.tabs.groups.smart.enabled": false,
+#      "browser.tabs.groups.smart.userEnabled": false,
+#      "extensions.ml.enabled": false,
+#      "browser.aiwindow.enabled": false
+#    }
+#  }
+#}
