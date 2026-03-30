@@ -1,5 +1,5 @@
 #!/bin/sh
-#Here will be all the scripts the machine will run every time it starts up
+#Here will be all the scripts the machine will run every time it starts up v1.0.0
 rm -r /home/aluno/Vídeos/*
 rm -r /home/aluno/Documentos/*
 rm -r /home/aluno/Downloads/*
@@ -72,24 +72,59 @@ webhosting" > /etc/CTparental/categories-enabled.conf
 echo "teste teste teste teste teste" > /home/aluno/.hidden/TESTE.txt
 
 
-
-#{
-#  "policies": {
-#    "DisableFirefoxStudies": true,
-#    "DisablePocket": true,
-#    "Preferences": {
-#      "browser.ml.enable": false,
-#      "browser.ml.chat.enabled": false,
-#      "browser.ml.chat.page.footerBadge": false,
-#      "browser.ml.chat.page.menuBadge": false,
-#      "browser.ml.chat.menu": false,
-#      "browser.ml.linkPreview.enabled": false,
-#      "browser.ml.smartAssist.enabled": false,
-#      "browser.ml.pageAssist.enabled": false,
-#      "browser.tabs.groups.smart.enabled": false,
-#      "browser.tabs.groups.smart.userEnabled": false,
-#      "extensions.ml.enabled": false,
-#      "browser.aiwindow.enabled": false
-#    }
-#  }
-#}
+echo '{
+  policies: {
+    OfferToSaveLoginsDefault: false,
+    OfferToSaveLogins: false,
+    NoDefaultBookmarks: true,
+    DisablePasswordReveal: true,
+    DisableSetDesktopBackground: true,
+    DisableProfileImport: true,
+    DisableFirefoxAccounts: true,
+    SanitizeOnShutdown: true,
+    SkipTermsOfUse: true,
+    DisableFirefoxStudies: true,
+    DisablePocket: true,
+    Preferences: {
+      browser.ml.enable: false,
+      browser.ml.chat.enabled: false,
+      browser.ml.chat.page.footerBadge: false,
+      browser.ml.chat.page.menuBadge: false,
+      browser.ml.chat.menu: false,
+      browser.ml.linkPreview.enabled: false,
+      browser.ml.smartAssist.enabled: false,
+      browser.ml.pageAssist.enabled: false,
+      browser.tabs.groups.smart.enabled: false,
+      browser.tabs.groups.smart.userEnabled: false,
+      extensions.ml.enabled: false,
+      browser.aiwindow.enabled: false
+    },
+    Cookies: {
+      AcceptThirdParty: never,
+      Behavior: reject-tracker-and-partition-foreign,
+      Locked: false
+    },
+    Extensions: {
+      Install: [
+      	https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi
+      ],
+      Locked: [
+        uBlock0@raymondhill.net
+      ]
+    },
+    ExtensionSettings: {
+      uBlock0@raymondhill.net: {
+      	installation_mode: force_installed,
+      	install_url: https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi,
+      	private_browsing: true
+      }
+    },
+    GenerativeAI: {
+      Enabled: false,
+      Chatbot: false,
+      LinkPreviews: false,
+      TabGroups: false,
+      Locked: true
+    }
+  }
+} > /etc/firefox/policies/policies.json
