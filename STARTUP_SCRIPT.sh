@@ -72,7 +72,7 @@ webhosting" > /etc/CTparental/categories-enabled.conf
 echo "teste teste teste teste teste" > /home/aluno/.hidden/TESTE.txt
 
 
-echo '{
+echo "{
   policies: {
     OfferToSaveLoginsDefault: false,
     OfferToSaveLogins: false,
@@ -127,4 +127,4 @@ echo '{
       Locked: true
     }
   }
-} > /etc/firefox/policies/policies.json
+}" > /etc/firefox/policies/policies.json
