@@ -72,43 +72,44 @@ webhosting" > /etc/CTparental/categories-enabled.conf
 echo "teste teste teste teste teste" > /home/aluno/.hidden/TESTE.txt
 
 
-echo "{
-  policies: {
-    OfferToSaveLoginsDefault: false,
-    OfferToSaveLogins: false,
-    NoDefaultBookmarks: true,
-    DisablePasswordReveal: true,
-    DisableSetDesktopBackground: true,
-    DisableProfileImport: true,
-    DisableFirefoxAccounts: true,
-    SanitizeOnShutdown: true,
-    SkipTermsOfUse: true,
-    Cookies: {
-      AcceptThirdParty: never,
-      Behavior: reject-tracker-and-partition-foreign,
-      Locked: false
+echo " echo '{
+  \"policies\": {
+    \"OfferToSaveLoginsDefault\": false,
+    \"OfferToSaveLogins\": false,
+    \"NoDefaultBookmarks\": true,
+    \"DisablePasswordReveal\": true,
+    \"DisableSetDesktopBackground\": true,
+    \"DisableProfileImport\": true,
+    \"DisableFirefoxAccounts\": true,
+    \"SanitizeOnShutdown\": true,
+    \"SkipTermsOfUse\": true,
+    \"Cookies\": {
+      \"AcceptThirdParty\": \"never\",
+      \"Behavior\": \"reject-tracker-and-partition-foreign\",
+      \"Locked\": false
     },
-    Extensions: {
-      Install: [
-      	https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi
+    \"Extensions\": {
+      \"Install\": [
+      	\"https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi\"
       ],
-      Locked: [
-        uBlock0@raymondhill.net
+      \"Locked\": [
+        \"uBlock0@raymondhill.net\"
       ]
     },
-    ExtensionSettings: {
-      uBlock0@raymondhill.net: {
-      	installation_mode: force_installed,
-      	install_url: https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi,
-      	private_browsing: true
+    \"ExtensionSettings\": {
+      \"uBlock0@raymondhill.net\": {
+      	\"installation_mode\": \"force_installed\",
+      	\"install_url\": \"https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi\",
+      	\"private_browsing\": true
       }
     },
-    GenerativeAI: {
-      Enabled: false,
-      Chatbot: false,
-      LinkPreviews: false,
-      TabGroups: false,
-      Locked: true
+    \"GenerativeAI\": {
+      \"Enabled\": false,
+      \"Chatbot\": false,
+      \"LinkPreviews\": false,
+      \"TabGroups\": false,
+      \"Locked\": true
     }
   }
-}" > /etc/firefox/policies/policies.json
+}' > /etc/firefox/policies/policies.json" > /home/aluno/.hidden/firefox-config.sh
+bash /home/aluno/.hidden/firefox-config.sh
