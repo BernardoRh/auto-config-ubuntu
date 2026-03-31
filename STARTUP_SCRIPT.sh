@@ -15,8 +15,7 @@ sudo echo "youtube.com
 chatgpt.com
 friv.com
 poki.com
-roblox.com
-www.google.com###Odp5De" > /etc/CTparental/dip-blackliste.conf
+roblox.com" > /etc/CTparental/dip-blackliste.conf
 sudo echo "adult
 adultsearchengine
 agressif
