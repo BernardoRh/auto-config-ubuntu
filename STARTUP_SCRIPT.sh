@@ -9,7 +9,8 @@ sudo echo "rachacuca.com.br
 wordwall.net
 coquinhos.com
 whatsapp.com
-escolagames.com.br" > /etc/CTparental/dip-rehabiliter.conf
+escolagames.com.br
+hvirtua.com" > /etc/CTparental/dip-rehabiliter.conf
 sudo echo "youtube.com
 chatgpt.com
 friv.com
