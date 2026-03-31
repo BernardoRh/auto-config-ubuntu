@@ -4,6 +4,7 @@ rm -r /home/aluno/Vídeos/*
 rm -r /home/aluno/Documentos/*
 rm -r /home/aluno/Downloads/*
 sudo CTparental -on
+apt install curl
 sudo echo "rachacuca.com.br
 wordwall.net
 coquinhos.com
@@ -115,4 +116,3 @@ echo " echo '{
   }
 }' > /etc/firefox/policies/policies.json" > /home/aluno/.hidden/firefox-config.sh
 bash /home/aluno/.hidden/firefox-config.sh
-apt install curl
