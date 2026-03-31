@@ -12,7 +12,8 @@ escolagames.com.br" > /etc/CTparental/dip-rehabiliter.conf
 sudo echo "youtube.com
 chatgpt.com
 friv.com
-poki.com" > /etc/CTparental/dip-blackliste.conf
+poki.com
+roblox.com" > /etc/CTparental/dip-blackliste.conf
 sudo echo "adult
 adultsearchengine
 agressif
