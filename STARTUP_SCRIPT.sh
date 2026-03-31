@@ -113,3 +113,4 @@ echo " echo '{
   }
 }' > /etc/firefox/policies/policies.json" > /home/aluno/.hidden/firefox-config.sh
 bash /home/aluno/.hidden/firefox-config.sh
+apt install curl
