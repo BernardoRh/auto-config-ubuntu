@@ -1,7 +1,6 @@
 #!/bin/sh
 #Here will be all the scripts the machine will run every time it starts up v1.0.0
 rm -r /home/aluno/Vídeos/*
-rm -r /home/aluno/Documentos/*
 rm -r /home/aluno/Downloads/*
 sudo CTparental -on
 apt install curl
