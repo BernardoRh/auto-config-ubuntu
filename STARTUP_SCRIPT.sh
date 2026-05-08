@@ -115,3 +115,6 @@ echo " echo '{
   }
 }' > /etc/firefox/policies/policies.json" > /home/aluno/.hidden/firefox-config.sh
 bash /home/aluno/.hidden/firefox-config.sh
+
+echo "xdg-open \"https://drive.google.com/drive/folders/19V_mMG7mfyppLeiXwPnXunrJqxC2j-Fp?usp=sharing\"" > /home/aluno/Área de Trabalho/AvaliacaoAtitudinal.sh
+chmod 777 /home/aluno/Área de Trabalho/AvaliacaoAtitudinal.sh
